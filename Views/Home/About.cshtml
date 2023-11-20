@@ -1,0 +1,31 @@
+﻿ @model IEnumerable<UniversityOfLiberia.Models.SchoolViewModels.EnrollmentDateGroup>
+
+@{
+    ViewData["Title"] = "Student Body Statistics";
+}
+<h1>Emmanuel DK Dolo.</h1> 
+<p>emmanueldkdolo1993@gmail.com</p>
+<h2>Student Body Statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Enrollment Date
+        </th>
+        <th>
+            Students
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td>
+                @item.StudentCount
+            </td>
+        </tr>
+    }
+</table>
